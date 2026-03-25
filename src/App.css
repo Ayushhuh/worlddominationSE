@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0b0f1a;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app {
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 15px;
+}
+
+.panel {
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.country-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.country-btn {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.country-btn:hover {
+  transform: scale(1.05);
+}
+
+.owned { background: #22c55e; }
+.enemy { background: #ef4444; }
+.neutral { background: #64748b; }
+
+.log {
+  margin-top: 10px;
+  height: 150px;
+  overflow-y: auto;
+  font-size: 12px;
+  background: #020617;
+  padding: 10px;
+  border-radius: 8px;
 }
